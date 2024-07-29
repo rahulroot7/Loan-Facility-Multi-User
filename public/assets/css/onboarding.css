@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+.wrapper {
+  position: relative;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Text Colors */
+.text_dark_blue {
+  color: #0c4271;
+}
+
+.text_dark_cyan {
+  color: #0a81ab;
+}
+
+/* Background Colors */
+.bg_dark_blue {
+  background-color: #0c4271;
+}
+.bg_skin {
+  background-color: #f9dfdc;
+}
+.bg_orange {
+  background-color: #f38523;
+}
+
+/* Border */
+.border_bottom_dark_cyan {
+  border-bottom: 5px solid #0a81ab;
+}
+
+/* Main headings */
+.primary_heading {
+  font-size: 2rem;
+  padding-top: 0.75rem;
+}
+
+.secondary_heading {
+  font-size: 1.5rem;
+}
+
+.tertiary_heading {
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #0c4271, #0a81ab);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quaternary_heading {
+  font-size: 0.875rem;
+}
+
+/* Other Stylings */
+li.parsley-required {
+  font-weight: 600;
+}
+
+.parsley_input_style {
+  background-color: #e9ecef !important;
+  border: 1px solid #ced4da !important;
+}
+
+.section_box {
+  border: 1px solid #2481ab;
+}
+
+.c-pointer {
+  cursor: pointer;
+}
+
+.project_detail {
+  background: linear-gradient(
+      to right,
+      rgba(12, 66, 113, 0.8),
+      rgba(10, 129, 171, 0.8)
+    ),
+    url(../img/process_bg.jpg);
+}
+
+.font_size_base {
+  font-size: 1rem;
+}
+
+h2 {
+  color: #9370db;
+  font-size: 1.125rem;
+}
+
+.heading_tertiary_box {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.eye_box {
+  position: relative;
+}
+
+.eye_box > i {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: #5d5d5d;
+  cursor: pointer;
+}
+
+.mandatory_field {
+  color: red;
+}
+
+.pages_status_circle,
+.pages_status_circle_green {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.pages_status_circle {
+  background-color: #d6d6d6;
+}
+
+.pages_status_circle_green {
+  position: relative;
+  background-color: #3b982e;
+}
+
+.pages_status_circle_green > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.datepicker {
+  padding: 4px 12px;
+}
+
+.field_border {
+  border-left: 1px transparent;
+  border-right: 1px transparent;
+  border-top: 1px transparent;
+  border-bottom: 2px solid #ced4da;
+  border-radius: 0;
+}
+
+.box {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* Button Style */
+.bg-1 {
+  background: #eceff1;
+  color: #37474f;
+}
+
+.button {
+  min-width: 120px;
+  max-width: 250px;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  position: relative;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.button_onboarding:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.button_onboarding {
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.75rem;
+  text-decoration: none;
+  border-radius: 50px;
+  background: #0a81ab;
+  color: #fff;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button_onboarding.button--inverted {
+  background: #eceff1;
+  color: #37474f;
+  text-decoration: none;
+}
+.button_onboarding::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  bottom: -15px;
+  right: -15px;
+  background: inherit;
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.4;
+  -webkit-transform: scale3d(0.8, 0.5, 1);
+  transform: scale3d(0.8, 0.5, 1);
+}
+.button_onboarding:hover {
+  -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
+  color: #eceff1;
+  text-decoration: none;
+  background-color: #0c4271;
+  -webkit-animation: anim-moema-1 0.3s forwards;
+  animation: anim-moema-1 0.3s forwards;
+}
+
+.button_onboarding:hover::before {
+  -webkit-animation: anim-moema-2 0.3s 0.3s forwards;
+  text-decoration: none;
+  animation: anim-moema-2 0.3s 0.3s forwards;
+}
+
+#hidden_pages_status,
+#pages_status {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all ease 0.3s;
+}
+.hide_status {
+  opacity: 0;
+}
+.show_status {
+  opacity: 1;
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid #c3c3c3;
+}
+
+#pf_nomination_table th,
+#pf_nomination_table td {
+  padding: 0.25rem;
+}
+
+/* Select2 CSS starts here*/
+.sel2 .parsley-errors-list.filled {
+  margin-top: 42px;
+  margin-bottom: -60px;
+}
+
+.sel2 .parsley-errors-list:not(.filled) {
+  display: none;
+}
+
+.sel2 .parsley-errors-list.filled + span.select2 {
+  margin-bottom: 30px;
+}
+
+.sel2
+  .parsley-errors-list.filled
+  + span.select2
+  span.select2-selection--single {
+  background: #faedec !important;
+  border: 1px solid #e85445;
+}
+
+.select2-container--default .select2-selection--multiple {
+  border: 1px solid #ced4da;
+}
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  background-color: initial;
+  background: linear-gradient(to right, #0c4271, #0a81ab);
+  color: white;
+  border: none;
+}
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__rendered {
+  padding: 0 12px;
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid #ced4da;
+}
+
+.select2-container .select2-selection--single {
+  height: 38px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 24px;
+  padding: 6px 12px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 6px;
+  right: 4px;
+}
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove,
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove:hover {
+  color: #fff;
+}
+
+.small_table .select2-container .select2-selection--single {
+  height: 31px;
+}
+.small_table
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  padding: 3px 6px;
+  font-size: 13px;
+}
+
+.small_table
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  top: 40%;
+}
+.small_table .select2-container {
+  width: 100% !important;
+}
+
+/* Code for select2 by akshay starts here */
+select[readonly].select2-hidden-accessible + .select2-container {
+  pointer-events: none;
+  touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible
+  + .select2-container
+  .select2-selection {
+  background: #eee;
+  box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible
+  + .select2-container
+  .select2-selection__arrow,
+select[readonly].select2-hidden-accessible
+  + .select2-container
+  .select2-selection__clear {
+  display: none;
+}
+/* Code for select2 by akshay ends here */
+
+/* Select2 CSS ends here*/
+
+.a_r_style_green {
+  background-color: green;
+}
+.a_r_style_green,
+.a_r_style_red,
+.a_r_style_default {
+  padding: 7px 8px;
+  border-radius: 20px;
+}
+.a_r_style {
+  font-size: 10px;
+  color: white;
+  margin: 0 2px;
+}
+.a_r_style_red {
+  background-color: red;
+}
+
+#pf_nomination_table input {
+  padding: 0.25rem 0.75rem;
+}
+
+.text_show_only[readonly] {
+  background-color: transparent;
+}
+
+.text_show_only:focus {
+  box-shadow: none;
+}
+.no_resize {
+  resize: none;
+}
+
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
+.id_proof a {
+  text-decoration: underline;
+  font-size: 13px;
+  text-transform: none;
+  color: #000;
+}
+ul.document-list {
+  padding-left: 5px;
+}
+ul.document-list li {
+  font-size: 10px;
+  margin-bottom: 2px;
+  display: block;
+  padding-left: 5px;
+}
+
+ul.document-list li button {
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  color: red;
+}
+
+/* Login Page css */
+#login_left_section {
+  background: linear-gradient(
+      to right,
+      rgba(12, 66, 113, 0.8),
+      rgba(10, 129, 171, 0.8)
+    ),
+    url(../img/login_bg.jpg) left top no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#login_left_section h1 {
+  font-size: 40px;
+}
+
+.important_info .points {
+  border-left: 4px solid #0c4271;
+}
+
+.important_info .points li:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+/* Animation starts here */
+@-webkit-keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes anim-moema-1 {
+  60% {
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+  }
+  85% {
+    -webkit-transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes anim-moema-2 {
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* Animation ends here */
